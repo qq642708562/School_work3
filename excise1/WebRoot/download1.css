@@ -1,0 +1,93 @@
+.aa{
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+ }
+ .aa:link,a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+}
+.aa:hover{
+    text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+#cc{
+    color: rgb(195, 165, 165);
+    position: absolute;
+    font-size: 25px;
+    right: 0px;
+}
+#dd{
+    color: rgb(195, 165, 165);
+    position: absolute;
+    font-size: 25px;
+    right:150px;
+    line-height: 37px;
+}
+.back{
+    font-size: 30px;
+    position: absolute; 
+    bottom: -10px;
+    right: 10px;
+}
+.tit-sub{
+    font-size: 20px;
+}
+.dl{
+    font-size: 20px;
+}
+.space{
+    font-size: 20px;
+}
+#t{ 
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    right:570px;
+    width:300px;
+    margin-top: 40px;
+}
+#x{
+    font-size: 30px;
+    position: absolute;
+    margin-top: 50px
+}
+#xx{
+    font-size: 20px;
+    position: absolute;
+    margin-top: 160px
+}
+#xxx{
+    font-size: 30px;
+    position: absolute;
+    margin-top: 220px;
+}
+#xxxx{
+    font-size: 20px;
+    position: absolute;
+    margin-top: 330px
+}
+#p1{
+    height: 20px;
+}
+.title{
+    font-size: 30px;
+    position: absolute;
+    margin-top: 5px
+}
+.title1{
+    font-size: 30px;
+    position: absolute;
+    margin-top: 170px
+}
+#k{
+    font-size: 30px;
+    position: absolute; 
+    bottom: 390px;
+    right: 1070px;
+}
+#kk{
+    font-size: 30px;
+    position: absolute; 
+    bottom: 155px;
+    right: 1070px;
+}

@@ -1,0 +1,30 @@
+
+.a{
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+ }
+a:link,a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+}
+a:hover{
+    text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+.b{
+    color: black;
+    font-size: 25px;
+}
+#c{
+    color: rgb(15, 75, 104);
+    position: absolute;
+    font-size: 25px;
+    right: 0px;
+}
+#d{
+    color: rgb(15, 75, 104);
+    position: absolute;
+    font-size: 25px;
+    right:150px;
+    line-height: 37px;
+}
+ 
