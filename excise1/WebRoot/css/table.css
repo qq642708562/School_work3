@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/1.jpg);
+    background-size: 100%;
+    background-position: center ; 
+}
+#pageBody{
+    width: 600px;
+    padding: 40px;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background-color: rgb(187,184,184);
+    z-index: 1001;
+    -moz-opacity:0.7;
+    opacity: 0.7;
+}
+.white_content{
+    display: none;
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    border: 6px solid lightblue;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+    /* div居中 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#a{
+    text-align: center;
+}
+#b{
+    float: right;
+    cursor: pointer;
+}
+#searchForm{
+    display:inline-block;
+}
+#bt{
+    display: inline-block;
+}
+.pageSize{
+    display: inline-block;
+}
+.pageNav{
+    display: inline-block;
+}
+.p1{
+    width: 90px;
+}
+.tr_odd{
+    background-color: rgb(250, 251, 245);
+}
+.tr_even{
+    background-color: rgb(228, 228, 228);
+}
+.tr_hover{
+    background-color: rgb(241, 192, 100);
+}
+.tr_select{
+    background-color: rgb(181, 181, 233);
+}
+.error{
+    color: red;
+    font-size: 14px;
+}
+#ckAll{
+    text-align: center;
+}
+.aa{
+    background-color: rgb(57, 167, 240);
+}
+#aaa{
+    text-align: center;
+}
+tbody{
+    text-align: center;
+    font-size: 16px;
+}
+.bbb{
+    width: 20px;
+    color: aliceblue;
+    font-size: 16px;
+    text-decoration:none;
+}
+#btSearch{
+    background-color: rgb(152, 44, 240);
+}
+#btClear{
+    background-color: rgb(255, 0, 0);
+}
+#btAdd{
+    background-color: rgb(38, 240, 162);
+}
+#btDelete{
+    background-color: rgb(255, 166, 0);
+}
+#btUpdate{
+    background-color: rgb(57, 167, 240);
+}
+#searchDiv{
+    display: inline-block;
+}
+#searchDiv input{
+    height:14px;
+}
+.box{
+    width: 240px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#a input[type= "text"],#a input[type="password"]{
+    border: 0;
+    background: none;
+    display: inline-block;
+    margin: 5px auto;
+    text-align: center;
+    border: 2px solid #ff8521;
+    padding: 10px 10px;
+    width: 180px;
+    outline: none;
+    color: orange;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+#a select{
+    border: 0;
+    background: none;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #ff8521;
+    outline: none;
+    color: #ff8521;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 60%;
+    padding: 5px;
+    text-align-last: center;
+}
+option{
+    text-align:center;
+}
+
+input::-webkit-input-placeholder{
+    color:#ff8521;
+}
+
+#a input[type= "button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #ff8521;
+    padding: 9px 40px;
+    outline: none;
+    color: #ff8521;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.pageNav{
+    position: relative;
+    left: 185px;
+}
+.paging{
+    color: #ff8521;
+}
+.a{
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration:none;
+ }
+ #cc{
+    color: #ff8521;
+    font-size: 25px;
+    position: absolute;
+    line-height: 37px;
+    right: 0px;
+    text-decoration:none;
+ }
+ #d{
+    color: rgb(128, 193, 226);
+    position: absolute;
+    font-size: 25px;
+    right:150px;
+    line-height: 37px;
+}
+#c{
+    color: #ff8521;
+    font-size: 25px;
+}
+#b{
+    position: relative;
+    bottom: 70px;
+    left: 100px;
+    font-size: 30px;
+
+}

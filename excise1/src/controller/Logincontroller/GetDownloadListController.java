@@ -20,9 +20,11 @@ public class GetDownloadListController extends HttpServlet {
 	throws ServletException,IOException{
 		DownloadDao dao = new DownloadDao();
 		ArrayList<Download> list = dao.query();
-		System.out.println(list);
+//		System.out.println(list);
+		String chrName = (String) request.getAttribute("chrName");
 		request.setAttribute("downloadlist", list);
-		RequestDispatcher rd = request.getRequestDispatcher("/download.jsp");
+//		request.setAttribute("chrName",chrName);
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/download.jsp");
 		rd.forward(request, response);
 	}
 }

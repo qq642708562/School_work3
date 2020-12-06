@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.CreateVerificationCodeImage;
 
-@WebServlet(urlPatterns="/CreateVerifyImage")
+@WebServlet(urlPatterns="/CreateVerifyImage.do")
 public class CreateVerifyImageController extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request,HttpServletResponse response)

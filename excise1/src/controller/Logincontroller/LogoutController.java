@@ -10,22 +10,25 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet(urlPatterns="/LogoutController.do")
+import javax.servlet.http.HttpSession;
+
+import vo.User;
+
+@WebServlet(urlPatterns = "/LogoutController.do")
 public class LogoutController extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Cookie cookie3 = new Cookie("name", null);
-		Cookie cookie4 = new Cookie("pwd", null);
-		cookie3.setMaxAge(0);
-		cookie4.setMaxAge(0);
-		cookie3.setPath("/");
-		cookie4.setPath("/");		
-		response.addCookie(cookie3);
-		response.addCookie(cookie4);
-		response.setContentType("text/html;charset=UTF-8");
-		request.getSession().removeAttribute("currentuser");
+		
+		User user = new User();
+		HttpSession session = request.getSession();
+		Cookie cookie1 = new Cookie("Cookie1", null);
+		Cookie cookie2 = new Cookie("Cookie2", null);
+		cookie1.setMaxAge(0);
+		cookie2.setMaxAge(0);
+		response.addCookie(cookie1);
+		response.addCookie(cookie2);
+		//System.out.println("out"+userName+"---"+password);
 		response.sendRedirect("/excise1/login.html");
 	}
-
 }
