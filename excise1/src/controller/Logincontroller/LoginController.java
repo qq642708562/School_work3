@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 						response.addCookie(cookie1);
 						response.addCookie(cookie2);
 					}
-					session.setAttribute("currentUser", userDao.get(userName)
+					session.setAttribute("userName", userDao.get(userName)
 							.getUserName());
 					session.setAttribute("chrName", userDao.get(userName)
 							.getChrName());

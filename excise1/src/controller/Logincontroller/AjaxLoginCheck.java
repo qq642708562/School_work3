@@ -35,6 +35,9 @@ public class AjaxLoginCheck extends HttpServlet {
 		HttpSession session = request.getSession();
 		String saveVcode = (String) session.getAttribute("verifyCode");
 		Map<String,Object>map = new HashMap<String,Object>();
+		UserDao dao = new UserDao();
+		int num = dao.isRoot(userName);
+		String role = null;
 		if(vcode==null){
 			map.put("code",4);
 			map.put("info", "验证码不能为空!");
@@ -53,18 +56,35 @@ public class AjaxLoginCheck extends HttpServlet {
 					map.put("code", 3);
 					map.put("info", "密码不正确");
 				}else{
-					session.setAttribute("currentUser", userDao.get(userName)
+					if(num!=10)
+					{
+						{
+							if(num==0){
+								role=dao.getrole(num);
+							}else{
+								role=dao.getrole(num);
+							}
+						}
+					}else{
+						map.put("code", 2);
+						map.put("info", "用户名不存在");
+					}
+					session.setAttribute("userName", userDao.get(userName)
 							.getUserName());
 					session.setAttribute("chrName", userDao.get(userName)
 							.getChrName());
 					session.setAttribute("user", userDao.get(userName));
+					session.setAttribute("role", role);
 					if(checkbox!=null){
 						Cookie cookie1 = new Cookie("Cookie1", userName);
 						Cookie cookie2 = new Cookie("Cookie2", password);
+						Cookie cookie3 = new Cookie("Cookie3", role);
 						cookie1.setMaxAge(60 * 60 * 24 * 7);
 						cookie2.setMaxAge(60 * 60 * 24 * 7);
+						cookie3.setMaxAge(60 * 60 * 24 * 7);
 						response.addCookie(cookie1);
 						response.addCookie(cookie2);
+						response.addCookie(cookie3);
 					}
 					map.put("code", 0);
 					map.put("info", "登录成功!");

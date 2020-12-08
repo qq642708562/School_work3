@@ -24,10 +24,13 @@ public class LogoutController extends HttpServlet {
 		HttpSession session = request.getSession();
 		Cookie cookie1 = new Cookie("Cookie1", null);
 		Cookie cookie2 = new Cookie("Cookie2", null);
+		Cookie cookie3 = new Cookie("Cookie3", null);
 		cookie1.setMaxAge(0);
 		cookie2.setMaxAge(0);
+		cookie3.setMaxAge(0);
 		response.addCookie(cookie1);
 		response.addCookie(cookie2);
+		response.addCookie(cookie3);
 		//System.out.println("out"+userName+"---"+password);
 		response.sendRedirect("/excise1/login.html");
 	}

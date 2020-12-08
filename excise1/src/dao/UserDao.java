@@ -20,6 +20,72 @@ public class UserDao extends HttpServlet {
 	private static final String userName1 = "root";
 	private static final String pwd = "123";
 
+	public String getrole(int num){
+		Connection con = null;
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		String roleName = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(URL, userName1, pwd);
+			String sql = "select roleName from t_role where roleId = ?";
+			pst = con.prepareStatement(sql);
+			pst.setInt(1, num);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				roleName = rs.getString(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pst != null)
+					pst.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return roleName;
+	}
+	public int isRoot(String userName){
+		Connection con = null;
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		int num = 10;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(URL, userName1, pwd);
+			String sql = "select roleId from t_user_role where username = ?";
+			pst = con.prepareStatement(sql);
+			pst.setString(1, userName);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				num = rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pst != null)
+					pst.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return num;
+	}
+	
+	
 	public User get(String userName) {
 		User user = null;
 		Connection con = null;

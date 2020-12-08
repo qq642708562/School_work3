@@ -49,6 +49,7 @@ public class PermissionFilter implements Filter {
 
 		String cname=null;
 		String cpwd=null;
+		String crole=null;
 		boolean result=false;
 		if (cookies != null) {
 			for(Cookie cookie:cookies){
@@ -58,9 +59,12 @@ public class PermissionFilter implements Filter {
 				if("Cookie2".equals(cookie.getName())){
 					cpwd=cookie.getValue();
 				}
+				if("Cookie3".equals(cookie.getName())){
+					crole=cookie.getValue();
+				}
 			}
 		}
-		if(cname != null && cpwd != null){
+		if(cname != null && cpwd != null && crole != null){
 			for(User user:list){
 				String uname=user.getUserName();
 				String upwd=user.getPassword();
@@ -70,16 +74,34 @@ public class PermissionFilter implements Filter {
 			}
 		}
 		
-
+			String userName = (String) session.getAttribute("userName");
+			UserDao dao = new UserDao();
+			int num = dao.isRoot(userName);
+			String role = null;
+			if(num!=10)
+			{
+				{
+					if(num==0){
+						role=dao.getrole(num);
+					}else{
+						role=dao.getrole(num);
+					}
+				}
+			}
 			if (result) {
-				session.setAttribute("currentUser", userDao.get(cname)
-						.getUserName());
-				session.setAttribute("chrName", userDao.get(cname).getChrName());
+				if(userName!=null && !"".equals(userName)){
+					session.setAttribute("chrName", userDao.get(userName).getChrName());
+					session.setAttribute("role", role);
+				}else{
+					session.setAttribute("chrName", userDao.get(cname).getChrName());
+					session.setAttribute("role", crole);
+				}
+				session.setAttribute("cName", userDao.get(cname).getUserName());
 				session.setAttribute("user", userDao.get(cname));
 				chain.doFilter(req, resp);
 			} else if (notCheckUri.indexOf(path) == -1) {
 			// HttpSession session = request.getSession();
-			if (session.getAttribute("currentUser") == null) {
+			if (cname==null) {
 				request.setAttribute("info", "±§Ç¸£¬ÄúÉÐÎ´µÇÂ¼");
 				request.getRequestDispatcher("/jsp/error.jsp").forward(request,
 						resp);
