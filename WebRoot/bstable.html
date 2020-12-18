@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bstable.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>表单</title>
+</head>
+<body>
+    <nav id="nav1" class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul id="ul1" class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">商品管理</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">订单管理</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">财务管理</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">相关管理</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">数据维护</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">系统管理</a>
+            </li>
+        </ul>
+        <span id="chrName" class="span">${role}:${chrName}</span>
+        <span id="firm" class="span">武汉市海欢商贸有限公司:系统管理员</span>
+    </nav>
+    <div id="div1">
+        <span id="span1">商品总览</span>
+    </div>
+
+    <div id="div2">
+    <input type="text" class="input" name="productId" id="productId" placeholder="   请输入商品货号" >
+    <input type="text" class="input" name="barCode" id="barCode" placeholder="   请输入条形码">
+    <select name="company" id="company">
+        <option id="companyo" value="">--所有公司--</option>
+    </select>
+    <svg id="searchphoto" t="1607755654260" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1178"><path d="M726.624149 462.055494c0-157.152203-123.57241-284.307208-276.247648-284.307208S174.128853 304.903292 174.128853 462.055494c0 156.705018 123.57241 283.859 276.247648 283.859S726.624149 618.760512 726.624149 462.055494zM864.523869 943.810656 696.178743 770.987542l-1.343601-1.790786c-66.711378 55.965639-151.779845 89.545432-244.459664 89.545432-213.56605 0-386.389164-177.748287-386.389164-396.686694 0-219.386616 172.823114-397.133879 386.389164-397.133879 213.117842 0 386.389164 177.748287 386.389164 397.133879 0 82.829474-25.073048 159.838382-67.159586 223.416396l5.372358 4.476965 168.345126 172.823114c21.490453 22.385846 21.490453 58.651818 0 81.038688C921.385924 965.749318 886.46253 965.749318 864.523869 943.810656z" p-id="1179"></path></svg>
+    <svg id="deletephoto" t="1607755785357" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1426"><path d="M718.882684 511.351282 1010.410118 800.927611C1024.685139 815.107052 1027.762671 835.153596 1017.28356 845.70286L849.127929 1014.985224C838.649124 1025.534489 818.582055 1022.591441 804.307034 1008.412L512.781438 718.837509 223.267604 1010.296628C209.089387 1024.570118 189.044682 1027.647038 178.496643 1017.169458L9.230209 849.03282C-1.318137 838.554934 1.624604 818.49001 15.802821 804.216827L305.314511 512.759546 13.70467 223.101423C-0.570351 208.921981-3.647577 188.875438 6.831534 178.326173L174.986859 9.043809C185.46597-1.505455 205.533039 1.437592 219.80806 15.617034L511.415756 305.273319 801.039568 13.703302C815.217785-0.570187 835.26249-3.647107 845.810529 6.83078L1015.076963 174.967417C1025.625309 185.444997 1022.682568 205.509921 1008.504351 219.78341L718.882684 511.351282Z" p-id="1427"></path></svg>
+
+    <div id="btndiv">
+    <button id="btnsearch" type="button" class="btn btn-success">查询</button>
+    <button id="btnclean" type="button" class="btn btn-danger">清除条件</button>
+    </div>
+    </div>
+    <div id="div5">
+        <button id="btn1"></button>
+        <button id="btn2"></button>
+        <svg t="1607922241940" id="arrayphoto" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3730" width="200" height="200"><path d="M511.997952 755.974268l365.02634-487.950584L146.975708 268.023684 511.997952 755.974268" p-id="3731"></path></svg>
+    </div>
+        <table id="table" class="table table-bordered table-striped table-hover">
+            <colgroup>
+                <col style="height:2%">
+                </colgroup>
+            <thead id="td">
+                <tr id="htr">
+                <th><input type="checkbox" id="checkbox"></th>
+                <th>商品货号</th>
+                <th>条形码</th>
+                <th>商品名称</th>
+                <th>一级分类</th>
+                <th>二级分类</th>
+                <th>供货价格</th>
+                <th>最低销售价格</th>
+                <th>推荐销售价格</th>
+                <th>商品规格</th>
+                <th>商品产地</th>
+                <th>计量单位</th>
+                <th>商品提供企业</th>
+                <th>审核状态</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="div3">每页显示
+            <select id="pageSize">
+                <option>5</option>
+                <option selected>10</option>
+                <option>15</option>
+            </select>条记录显示第
+            <span id="pageNumber">1</span>到第
+            <span id="pageCount"></span>页记录,总共
+            <span id="total"></span>条记录
+        </div>
+        <div id="div4">             
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#"><</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+              <li class="page-item"><a class="page-link" href="#">></a></li>
+            </ul>
+          </div>
+</body>
+</html>

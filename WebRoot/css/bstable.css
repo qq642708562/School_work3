@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: 40px;
+}
+#ul1{
+    position: relative;
+    left: 65px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+#firm{
+    font-size: 13px; 
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.span{
+    color: white;
+}
+#div1{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(243, 243, 243);
+}
+#span1{
+    position: absolute;
+    left: 20px;
+    top: 45px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+#chrName{
+    position: absolute;
+    right: 620px;
+}
+#firm{
+    position: absolute;
+    right: 10px;
+}
+.nav-item{
+    padding-right: 40px;
+}
+select{
+    text-align: center;
+    text-align-last: center;
+    cursor: pointer;/* 鼠标移上，变小手 */
+    padding: 0 10px;
+    appearance:none;/* 清除默认的箭头样式 */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+#company{
+    height: 33px;
+    width: 230px;
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 4px;
+    font-size: 10px;
+     /*在选择框的最右侧中间显示小箭头图片*/
+     background: url("../images/arrow1.png") no-repeat scroll center transparent;
+     background-position: 98% 60%;
+     background-size: 6px;
+     /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+     padding-right: 14px;
+     border-radius: 4px;
+     border: 1px solid rgb(197, 192, 192);
+}
+#pageSize{
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/arrow2.png") no-repeat scroll center transparent;
+    background-position: 82% 55%;
+    background-size: 10px;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+    border-radius: 4px;
+    border: 1px solid rgb(197, 192, 192);
+    width: 48px;
+    height: 28px;
+}
+option{
+    text-align:center;
+    /* text-align-last: center; */
+}
+.input{
+    height: 33px;
+    width: 200px;
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 4px;
+    font-size: 10px;
+}
+#searchphoto{
+    position: absolute;
+    left: 654px;
+    top: 12px;
+    display: inline-block;
+    margin: 0px;
+    fill: white;
+    width: 13px;
+}
+#deletephoto{
+    position: absolute;
+    left: 715px;
+    top: 13px;
+    display: inline-block;
+    margin: 0px;
+    fill: white;
+    width: 10px;
+}
+#btndiv{
+    display: inline-block;
+}
+#btnsearch{
+    font-size: 12px;
+    line-height: 10px;
+    padding-left: 20px;
+    width: 60px;
+    height: 33px;
+}
+#btnclean{
+    font-size: 12px;
+    line-height: 10px;
+    padding-left: 17px;
+    height: 33px;
+} 
+.table{
+    text-align: center;
+    table-layout: fixed;
+    position: absolute;
+    top: 18%;
+}  
+#htr{
+    width: 100%;
+    font-size: 10px;
+}
+th{
+    color: rgb(88, 92, 90);
+    font-size: 10px;
+    
+    height: 0px;
+}
+#td{
+    background-color: rgb(207, 238, 238);
+    
+    height: 5px;
+}
+#div2{
+    position: absolute;
+    top: 85px;
+    padding-bottom: 10px;
+    margin-left: 2px;
+    display: inline-block;
+}
+#div3{
+    font-size: 13px;
+    position: absolute;
+    left: 5px;
+    bottom: 2%;
+    /* font-weight: bolder; */
+}
+#div4{
+    position: absolute;
+    right: 5px;
+    bottom:1%;
+}
+#div5{
+    position: absolute;
+    top: 83px;
+    right: 5px;
+    display: inline-block;
+}
+#btn1{
+    position: relative;
+    left: 5px;
+    background-color: #fff;
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 4px 0 0 4px;
+    width: 37px;
+    height: 34px;
+    background: url("../images/refresh.png") no-repeat scroll center transparent;
+    background-position: 50% 50%;
+    background-size: 16px;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+#btn2{
+    background-color: #fff;
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 0 4px 4px 0;
+    width: 46px;
+    height: 34px;
+    background: url("../images/array.png") no-repeat scroll center transparent;
+    background-position: 35% 50%;
+    background-size: 15px;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+#arrayphoto{
+    position: absolute;
+    right: 8px;
+    bottom: -82px;
+    width: 9px;
+}
